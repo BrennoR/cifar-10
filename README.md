@@ -150,6 +150,14 @@ As shown above, the deep model with batch normalization and data augmentation pe
 a final test accuracy of 84%! Subsequent tests were made using additional data augmentation techniques such as scaling, shearing, and
 rotation. Surprisingly, these tests were shown to actually hurt the overall performance of the model.
 
+## Conclusions
+There are many conclusions to be drawn from this study. The different model architectures demonstrated that it is extremely easy to
+overfit this dataset. All model sizes began to overfit after only a couple of epochs. Batch normalization helped reduce overfitting and
+led to greater accuracies for all architectures (5% improvement for the shallow model). The various optimizers performed similarly, but
+Adam and Adamax were the best performers. It is very possible however that the others could perform just as well given hyperparameter 
+tweaking. This is an area for further study. Data augmentation had an immense effect on the accuracy of the models. Due to a very effective
+reduction in overfitting, deeper models could be used in conjunction with data augmentation to achieve a higher final accuracy. 
+
 ## Future Work
 There is much future work to be done on different model architectures, sizes, and techniques. Many more tests can be run on data augmentation
 techniques in order to further improve performance. In addition, other techniques such as kernel regularization and their effect on
